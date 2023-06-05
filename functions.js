@@ -217,12 +217,13 @@ let concatenateString = (str1, str2) => {
   if (typeof str1 == "string" && typeof str2 == "string") {
     return str1 + str2;
   } else {
-    return `You can only pass string values as arguments`;
+    return `\nYou can only pass string values as arguments\n`;
   }
 };
 
 console.log(concatenateString(227, "Niemczyk"));
 console.log(concatenateString());
+console.log(concatenateString("enoch ", "ikunda"));
 
 // ? Immediately Invoked Function Expression (IIFE)
 
@@ -271,8 +272,10 @@ let fizzBuzz = (start, stop) => {
     for (let i = start; i <= stop; i++) {
         i % 15 === 0
             ? console.log("Fizz Buzz")
-            : i % 3 === 0 ? console.log("Fizz")
-            : i % 5 === 0 ? console.log("Buzz")
+            : i % 3 === 0 
+            ? console.log("Fizz")
+            : i % 5 === 0 
+            ? console.log("Buzz")
             : console.log(i)
     }
 }
@@ -290,7 +293,8 @@ fizzBuzz(47, 85)
 */
 
 
-
+/* 
+    !my codes
 function splitAndReverse (str){
     let reverse = " ";
     for (i = str.length; i >= 0; i--){
@@ -300,8 +304,17 @@ function splitAndReverse (str){
     console.log (`\n ${reverse}`);
 
 }
-splitAndReverse ("Hello world!") 
+splitAndReverse ("Hello world!")  */
 
+let reverse = str => {
+    let reversed = ""
+    for (i = str.length - 1; i >= 0; i--) {
+        reversed += str[i]
+    }
+    return reversed
+}
+
+console.log(reverse("Niemczyk"))
 
 
 
